@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hava Durumu Uygulaması</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Weather App</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="app-container">
-    <h1>🌤 Hava Durumu</h1>
+  <div class="app">
+    <h1>🌤️ Weather App</h1>
+    <input type="text" id="cityInput" placeholder="Type a city..." autocomplete="off">
+    <div id="suggestions"></div>
 
-    <div class="search-box">
-      <input type="text" id="cityInput" placeholder="Şehir adı girin...">
-      <button id="searchBtn">Ara</button>
+    <div id="weatherCard" class="card hidden">
+      <h2 id="cityName">City, Country</h2>
+      <img id="weatherIcon" src="" alt="Weather Icon">
+      <p id="temperature">🌡️ 0°C</p>
+      <p id="description">☁️ Clear</p>
+      <p id="wind">💨 Wind: 0 m/s</p>
+      <p id="humidity">💧 Humidity: 0%</p>
     </div>
-
-    <div id="result" class="weather-result"></div>
   </div>
 
-  <script src="havadurumu.js"></script>
+<script src="havadurumu.js"></script>
 </body>
 </html>
