@@ -7,7 +7,6 @@ const temperatureEl = document.getElementById("temperature");
 const descriptionEl = document.getElementById("description");
 const windEl = document.getElementById("wind");
 const humidityEl = document.getElementById("humidity");
-const background = document.querySelector(".background");
 
 const apiKey = "125de7a7011df63065ff831ea91137b9";
 
@@ -36,7 +35,7 @@ cityInput.addEventListener("input", async () => {
   });
 });
 
-// Hava durumu verilerini getir ve arkaplan değiştir
+// Hava durumu verilerini getir
 async function getWeather(lat, lon) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   const res = await fetch(url);
@@ -50,28 +49,5 @@ async function getWeather(lat, lon) {
     windEl.textContent = `💨 Wind: ${data.wind.speed} m/s`;
     humidityEl.textContent = `💧 Humidity: ${data.main.humidity}%`;
     weatherCard.classList.remove("hidden");
-
-    // Arkaplanı hava durumuna göre değiştir
-    const weatherMain = data.weather[0].main.toLowerCase();
-    switch(weatherMain) {
-      case 'clear':
-        background.style.background = "linear-gradient(to right, #fceabb, #f8b500)";
-        break;
-      case 'clouds':
-        background.style.background = "linear-gradient(to right, #bdc3c7, #2c3e50)";
-        break;
-      case 'rain':
-      case 'drizzle':
-        background.style.background = "linear-gradient(to right, #4e54c8, #8f94fb)";
-        break;
-      case 'thunderstorm':
-        background.style.background = "linear-gradient(to right, #0f2027, #203a43, #2c5364)";
-        break;
-      case 'snow':
-        background.style.background = "linear-gradient(to right, #e0eafc, #cfdef3)";
-        break;
-      default:
-        background.style.background = "linear-gradient(to right, #74ebd5, #9face6)";
-    }
   }
 }
