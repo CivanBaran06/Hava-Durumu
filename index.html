@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basit Hava Durumu</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hava Durumu Uygulaması</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Basit Hava Durumu Simülasyonu</h1>
-        <input type="text" id="cityInput" placeholder="Şehir yazın...">
-        <button id="checkWeatherBtn">Hava Durumunu Göster</button>
-        <p id="weatherDisplay">Hava durumu burada görünecek.</p>
+  <div class="app-container">
+    <h1>🌤 Hava Durumu</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Şehir adı girin...">
+      <button id="searchBtn">Ara</button>
     </div>
-    <script src="havadurumu.js"></script>
+
+    <div id="result" class="weather-result"></div>
+  </div>
+
+  <script src="havadurumu.js"></script>
 </body>
 </html>

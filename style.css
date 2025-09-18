@@ -1,49 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
-    transition: background 0.5s;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-    text-align: center;
-    background-color: rgba(255,255,255,0.85);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
-    max-width: 400px;
+.app-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
 }
 
-input {
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
+h1 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #2980b9;
+.search-box input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
 }
 
-#weatherDisplay {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+}
+
+.search-box button:hover {
+  background: #0056b3;
+}
+
+.weather-result {
+  margin-top: 20px;
+}
+
+.weather-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.weather-card img {
+  width: 80px;
+}
+
+.weather-card h2 {
+  margin: 10px 0;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
