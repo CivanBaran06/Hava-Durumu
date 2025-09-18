@@ -12,7 +12,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #1c1c1c, #0f2027);
   overflow: hidden;
 }
 
